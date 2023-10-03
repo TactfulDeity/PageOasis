@@ -1,7 +1,7 @@
 # PageOasis
 Frontent EBook (PDF) manager
 
-Contributors
+## Contributors
 - David Kaczor
 - Leena Malik
 - Nathaniel Young
