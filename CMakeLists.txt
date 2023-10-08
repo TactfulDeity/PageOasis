@@ -1,0 +1,12 @@
+SET(SOURCES screens/ui_Main_Screen.c
+    ui.c
+    components/ui_comp_hook.c
+    ui_helpers.c
+    images/ui_img_467871261.c
+    images/ui_img_1931740894.c
+    images/ui_img_setting_icon_25px_png.c
+    images/ui_img_grid_view_25px_png.c
+    images/ui_img_list_view_25px_png.c
+    images/ui_img_pageoasislogo_png.c)
+
+add_library(ui ${SOURCES})
