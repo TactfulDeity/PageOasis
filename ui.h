@@ -28,6 +28,7 @@ extern lv_obj_t *ui_Collapse;
 extern lv_obj_t *ui_Settings;
 extern lv_obj_t *ui_LightDarkToggle;
 extern lv_obj_t *ui_GridListToggle;
+extern lv_obj_t *ui_SortToggle;
 extern lv_obj_t *ui_Lists_Title_Bar;
 extern lv_obj_t *ui_List_Title;
 extern lv_obj_t *ui_PageOasisLogo;
@@ -38,6 +39,8 @@ LV_IMG_DECLARE( ui_img_1931740894);   // assets\Collapse-sidebar-25px.png
 LV_IMG_DECLARE( ui_img_setting_icon_25px_png);   // assets\Setting_Icon_25px.png
 LV_IMG_DECLARE( ui_img_grid_view_25px_png);   // assets\grid_view_25px.png
 LV_IMG_DECLARE( ui_img_list_view_25px_png);   // assets\list_view_25px.png
+LV_IMG_DECLARE( ui_img_1121264212);   // assets\A-Z_25px.png
+LV_IMG_DECLARE( ui_img_1508908300);   // assets\Z-A_25px.png
 LV_IMG_DECLARE( ui_img_pageoasislogo_png);   // assets\PageOasisLogo.png
 
 
