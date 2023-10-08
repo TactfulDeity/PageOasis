@@ -32,7 +32,7 @@ Table of Contents
    - Searching for eBooks
    - Theme change
    - Grid view change
-   -
+   - Sort A-Z or Z-A
    -
 
 6. Troubleshooting
@@ -56,16 +56,19 @@ Table of Contents
 
 ## Installation
 
-1. System Requirements
+### System Requirements
 
 Before installing the Offline eBook Application, ensure that your device meets the following requirements:
 
-    - Operating System: Windows 10 / macOS 10.12 or later / Linux (system-specific requirements may apply)
-    - Processor: 1 GHz or faster
-    - RAM: 2 GB or more
-    - Storage: 100 MB of available disk space
+- Operating System: 
+  - Windows 10 
+  - macOS 10.12 or later 
+  - Linux (system-specific requirements may apply)
+- Processor: 1 GHz or faster
+- RAM: 2 GB or more
+- Storage: 100 MB of available disk space
 
-2. Installation Steps
+### Installation Steps
 - 
 - 
 
@@ -109,6 +112,9 @@ Before installing the Offline eBook Application, ensure that your device meets t
 
 3. Grid/List View Change
     - The next toggle button will change how the eBooks are displayed. From grid view to list view and back again.
+
+4. Sort A-Z or Z-A
+- The last toggle button will change the default sort from Alphabetically A-Z to reverse alpabetically Z-A
 
 ## Trouble Shooting
 
