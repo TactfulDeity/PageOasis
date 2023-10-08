@@ -25,6 +25,7 @@ lv_obj_t *ui_LightDarkToggle;
 lv_obj_t *ui_GridListToggle;
 lv_obj_t *ui_Lists_Title_Bar;
 lv_obj_t *ui_List_Title;
+lv_obj_t *ui_Sort_Lists;
 lv_obj_t *ui_PageOasisLogo;
 lv_obj_t *ui____initial_actions0;
 

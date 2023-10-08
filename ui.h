@@ -30,6 +30,7 @@ extern lv_obj_t *ui_LightDarkToggle;
 extern lv_obj_t *ui_GridListToggle;
 extern lv_obj_t *ui_Lists_Title_Bar;
 extern lv_obj_t *ui_List_Title;
+extern lv_obj_t *ui_Sort_Lists;
 extern lv_obj_t *ui_PageOasisLogo;
 extern lv_obj_t *ui____initial_actions0;
 

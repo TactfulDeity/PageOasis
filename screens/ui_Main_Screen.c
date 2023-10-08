@@ -227,6 +227,27 @@ lv_obj_set_style_text_align(ui_List_Title, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN| L
 lv_obj_set_style_text_decor(ui_List_Title, LV_TEXT_DECOR_NONE, LV_PART_MAIN| LV_STATE_DEFAULT);
 lv_obj_set_style_text_font(ui_List_Title, &lv_font_montserrat_24, LV_PART_MAIN| LV_STATE_DEFAULT);
 
+ui_Sort_Lists = lv_dropdown_create(ui_Lists_Bar);
+lv_dropdown_set_options( ui_Sort_Lists, "A-Z\nZ-A\nFavorites\nLists" );
+lv_obj_set_width( ui_Sort_Lists, 130);
+lv_obj_set_height( ui_Sort_Lists, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_Sort_Lists, 1 );
+lv_obj_set_y( ui_Sort_Lists, 55 );
+lv_obj_set_align( ui_Sort_Lists, LV_ALIGN_TOP_MID );
+lv_obj_add_flag( ui_Sort_Lists, LV_OBJ_FLAG_SCROLL_ON_FOCUS );   /// Flags
+lv_obj_set_style_text_color(ui_Sort_Lists, lv_color_hex(0xCCCCCC), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_text_opa(ui_Sort_Lists, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_Sort_Lists, &lv_font_montserrat_18, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_radius(ui_Sort_Lists, 0, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_bg_color(ui_Sort_Lists, lv_color_hex(0x00A8B5), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_bg_opa(ui_Sort_Lists, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_border_color(ui_Sort_Lists, lv_color_hex(0x00A8B5), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_border_opa(ui_Sort_Lists, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+
+lv_obj_set_style_radius(lv_dropdown_get_list(ui_Sort_Lists), 0,  LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_bg_color(lv_dropdown_get_list(ui_Sort_Lists), lv_color_hex(0x4B4B4B),  LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_bg_opa(lv_dropdown_get_list(ui_Sort_Lists), 255,  LV_PART_MAIN| LV_STATE_DEFAULT);
+
 ui_PageOasisLogo = lv_img_create(ui_Main_Screen);
 lv_img_set_src(ui_PageOasisLogo, &ui_img_pageoasislogo_png);
 lv_obj_set_width( ui_PageOasisLogo, LV_SIZE_CONTENT);  /// 1
