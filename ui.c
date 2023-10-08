@@ -21,12 +21,34 @@ lv_obj_t *ui_Button_Bar;
 void ui_event_Collapse( lv_event_t * e);
 lv_obj_t *ui_Collapse;
 lv_obj_t *ui_Settings;
+void ui_event_LightDarkToggle( lv_event_t * e);
 lv_obj_t *ui_LightDarkToggle;
+void ui_event_GridListToggle( lv_event_t * e);
 lv_obj_t *ui_GridListToggle;
 lv_obj_t *ui_Lists_Title_Bar;
 lv_obj_t *ui_List_Title;
 lv_obj_t *ui_Sort_Lists;
 lv_obj_t *ui_PageOasisLogo;
+
+
+// SCREEN: ui_Main_Screen1
+void ui_Main_Screen1_screen_init(void);
+lv_obj_t *ui_Main_Screen1;
+void ui_event_Expand1( lv_event_t * e);
+lv_obj_t *ui_Expand1;
+lv_obj_t *ui_Lists_Bar1;
+lv_obj_t *ui_Button_Bar1;
+void ui_event_Collapse1( lv_event_t * e);
+lv_obj_t *ui_Collapse1;
+lv_obj_t *ui_Settings1;
+void ui_event_LightDarkToggle1( lv_event_t * e);
+lv_obj_t *ui_LightDarkToggle1;
+void ui_event_GridListToggle1( lv_event_t * e);
+lv_obj_t *ui_GridListToggle1;
+lv_obj_t *ui_Lists_Title_Bar1;
+lv_obj_t *ui_List_Title1;
+lv_obj_t *ui_Sort_Lists1;
+lv_obj_t *ui_PageOasisLogo1;
 lv_obj_t *ui____initial_actions0;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////
@@ -98,6 +120,44 @@ if ( event_code == LV_EVENT_CLICKED) {
       Collapse_Animation(ui_Lists_Bar, 0);
 }
 }
+void ui_event_LightDarkToggle( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
+if ( event_code == LV_EVENT_RELEASED) {
+      _ui_screen_change( &ui_Main_Screen1, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_Main_Screen1_screen_init);
+      _ui_state_modify( ui_LightDarkToggle, LV_STATE_CHECKED, _UI_MODIFY_STATE_REMOVE);
+}
+}
+void ui_event_GridListToggle( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
+if ( event_code == LV_EVENT_CLICKED) {
+      _ui_state_modify( ui_GridListToggle1, LV_STATE_CHECKED, _UI_MODIFY_STATE_TOGGLE);
+}
+}
+void ui_event_Expand1( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
+if ( event_code == LV_EVENT_CLICKED) {
+      Expand_Animation(ui_Lists_Bar1, 0);
+}
+}
+void ui_event_Collapse1( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
+if ( event_code == LV_EVENT_CLICKED) {
+      Collapse_Animation(ui_Lists_Bar1, 0);
+}
+}
+void ui_event_LightDarkToggle1( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
+if ( event_code == LV_EVENT_CLICKED) {
+      _ui_screen_change( &ui_Main_Screen, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_Main_Screen_screen_init);
+      _ui_state_modify( ui_LightDarkToggle1, LV_STATE_CHECKED, _UI_MODIFY_STATE_ADD);
+}
+}
+void ui_event_GridListToggle1( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
+if ( event_code == LV_EVENT_CLICKED) {
+      _ui_state_modify( ui_GridListToggle, LV_STATE_CHECKED, _UI_MODIFY_STATE_TOGGLE);
+}
+}
 
 ///////////////////// SCREENS ////////////////////
 
@@ -107,6 +167,7 @@ lv_disp_t *dispp = lv_disp_get_default();
 lv_theme_t *theme = lv_theme_default_init(dispp, lv_palette_main(LV_PALETTE_BLUE), lv_palette_main(LV_PALETTE_RED), false, LV_FONT_DEFAULT);
 lv_disp_set_theme(dispp, theme);
 ui_Main_Screen_screen_init();
+ui_Main_Screen1_screen_init();
 ui____initial_actions0 = lv_obj_create(NULL);
 lv_disp_load_scr( ui_Main_Screen);
 }

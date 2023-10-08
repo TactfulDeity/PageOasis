@@ -26,12 +26,32 @@ extern lv_obj_t *ui_Button_Bar;
 void ui_event_Collapse( lv_event_t * e);
 extern lv_obj_t *ui_Collapse;
 extern lv_obj_t *ui_Settings;
+void ui_event_LightDarkToggle( lv_event_t * e);
 extern lv_obj_t *ui_LightDarkToggle;
+void ui_event_GridListToggle( lv_event_t * e);
 extern lv_obj_t *ui_GridListToggle;
 extern lv_obj_t *ui_Lists_Title_Bar;
 extern lv_obj_t *ui_List_Title;
 extern lv_obj_t *ui_Sort_Lists;
 extern lv_obj_t *ui_PageOasisLogo;
+// SCREEN: ui_Main_Screen1
+void ui_Main_Screen1_screen_init(void);
+extern lv_obj_t *ui_Main_Screen1;
+void ui_event_Expand1( lv_event_t * e);
+extern lv_obj_t *ui_Expand1;
+extern lv_obj_t *ui_Lists_Bar1;
+extern lv_obj_t *ui_Button_Bar1;
+void ui_event_Collapse1( lv_event_t * e);
+extern lv_obj_t *ui_Collapse1;
+extern lv_obj_t *ui_Settings1;
+void ui_event_LightDarkToggle1( lv_event_t * e);
+extern lv_obj_t *ui_LightDarkToggle1;
+void ui_event_GridListToggle1( lv_event_t * e);
+extern lv_obj_t *ui_GridListToggle1;
+extern lv_obj_t *ui_Lists_Title_Bar1;
+extern lv_obj_t *ui_List_Title1;
+extern lv_obj_t *ui_Sort_Lists1;
+extern lv_obj_t *ui_PageOasisLogo1;
 extern lv_obj_t *ui____initial_actions0;
 
 LV_IMG_DECLARE( ui_img_467871261);   // assets\expand-sidebar-25px.png
