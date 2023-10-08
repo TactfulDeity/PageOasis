@@ -7,8 +7,6 @@ SET(SOURCES screens/ui_Main_Screen.c
     images/ui_img_setting_icon_25px_png.c
     images/ui_img_grid_view_25px_png.c
     images/ui_img_list_view_25px_png.c
-    images/ui_img_1121264212.c
-    images/ui_img_1508908300.c
     images/ui_img_pageoasislogo_png.c)
 
 add_library(ui ${SOURCES})

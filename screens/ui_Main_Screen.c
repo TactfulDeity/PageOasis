@@ -203,59 +203,6 @@ lv_obj_set_style_bg_img_src( ui_GridListToggle, &ui_img_list_view_25px_png, LV_P
 lv_obj_set_style_bg_img_recolor(ui_GridListToggle, lv_color_hex(0x111111), LV_PART_KNOB| LV_STATE_CHECKED);
 lv_obj_set_style_bg_img_recolor_opa(ui_GridListToggle, 255, LV_PART_KNOB| LV_STATE_CHECKED);
 
-ui_SortToggle = lv_switch_create(ui_Button_Bar);
-lv_obj_set_width( ui_SortToggle, 50);
-lv_obj_set_height( ui_SortToggle, 30);
-lv_obj_set_x( ui_SortToggle, 90 );
-lv_obj_set_y( ui_SortToggle, 0 );
-lv_obj_set_align( ui_SortToggle, LV_ALIGN_LEFT_MID );
-lv_obj_set_style_radius(ui_SortToggle, 0, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_bg_color(ui_SortToggle, lv_color_hex(0xCCCCCC), LV_PART_MAIN | LV_STATE_DEFAULT );
-lv_obj_set_style_bg_opa(ui_SortToggle, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_outline_color(ui_SortToggle, lv_color_hex(0x1F1F1F), LV_PART_MAIN | LV_STATE_DEFAULT );
-lv_obj_set_style_outline_opa(ui_SortToggle, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_outline_width(ui_SortToggle, 2, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_outline_pad(ui_SortToggle, 0, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_shadow_color(ui_SortToggle, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT );
-lv_obj_set_style_shadow_opa(ui_SortToggle, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_shadow_width(ui_SortToggle, 25, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_shadow_spread(ui_SortToggle, 2, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_radius(ui_SortToggle, 0, LV_PART_MAIN| LV_STATE_PRESSED);
-lv_obj_set_style_bg_color(ui_SortToggle, lv_color_hex(0x111111), LV_PART_MAIN | LV_STATE_PRESSED );
-lv_obj_set_style_bg_opa(ui_SortToggle, 255, LV_PART_MAIN| LV_STATE_PRESSED);
-
-lv_obj_set_style_radius(ui_SortToggle, 0, LV_PART_INDICATOR| LV_STATE_CHECKED);
-lv_obj_set_style_bg_color(ui_SortToggle, lv_color_hex(0x4B4B4B), LV_PART_INDICATOR | LV_STATE_CHECKED );
-lv_obj_set_style_bg_opa(ui_SortToggle, 255, LV_PART_INDICATOR| LV_STATE_CHECKED);
-lv_obj_set_style_outline_color(ui_SortToggle, lv_color_hex(0x1F1F1F), LV_PART_INDICATOR | LV_STATE_CHECKED );
-lv_obj_set_style_outline_opa(ui_SortToggle, 255, LV_PART_INDICATOR| LV_STATE_CHECKED);
-lv_obj_set_style_outline_width(ui_SortToggle, 2, LV_PART_INDICATOR| LV_STATE_CHECKED);
-lv_obj_set_style_outline_pad(ui_SortToggle, 0, LV_PART_INDICATOR| LV_STATE_CHECKED);
-lv_obj_set_style_shadow_color(ui_SortToggle, lv_color_hex(0x000000), LV_PART_INDICATOR | LV_STATE_CHECKED );
-lv_obj_set_style_shadow_opa(ui_SortToggle, 255, LV_PART_INDICATOR| LV_STATE_CHECKED);
-lv_obj_set_style_shadow_width(ui_SortToggle, 10, LV_PART_INDICATOR| LV_STATE_CHECKED);
-lv_obj_set_style_shadow_spread(ui_SortToggle, 2, LV_PART_INDICATOR| LV_STATE_CHECKED);
-lv_obj_set_style_radius(ui_SortToggle, 0, LV_PART_INDICATOR| LV_STATE_PRESSED);
-lv_obj_set_style_bg_color(ui_SortToggle, lv_color_hex(0x00D7E8), LV_PART_INDICATOR | LV_STATE_PRESSED );
-lv_obj_set_style_bg_opa(ui_SortToggle, 255, LV_PART_INDICATOR| LV_STATE_PRESSED);
-
-lv_obj_set_style_radius(ui_SortToggle, 0, LV_PART_KNOB| LV_STATE_DEFAULT);
-lv_obj_set_style_bg_color(ui_SortToggle, lv_color_hex(0x585858), LV_PART_KNOB | LV_STATE_DEFAULT );
-lv_obj_set_style_bg_opa(ui_SortToggle, 255, LV_PART_KNOB| LV_STATE_DEFAULT);
-lv_obj_set_style_bg_img_src( ui_SortToggle, &ui_img_1121264212, LV_PART_KNOB | LV_STATE_DEFAULT );
-lv_obj_set_style_bg_img_recolor(ui_SortToggle, lv_color_hex(0x111111), LV_PART_KNOB| LV_STATE_DEFAULT);
-lv_obj_set_style_bg_img_recolor_opa(ui_SortToggle, 255, LV_PART_KNOB| LV_STATE_DEFAULT);
-lv_obj_set_style_outline_color(ui_SortToggle, lv_color_hex(0x1F1F1F), LV_PART_KNOB | LV_STATE_DEFAULT );
-lv_obj_set_style_outline_opa(ui_SortToggle, 255, LV_PART_KNOB| LV_STATE_DEFAULT);
-lv_obj_set_style_outline_width(ui_SortToggle, 2, LV_PART_KNOB| LV_STATE_DEFAULT);
-lv_obj_set_style_outline_pad(ui_SortToggle, 0, LV_PART_KNOB| LV_STATE_DEFAULT);
-lv_obj_set_style_radius(ui_SortToggle, 0, LV_PART_KNOB| LV_STATE_CHECKED);
-lv_obj_set_style_bg_color(ui_SortToggle, lv_color_hex(0xFFFFFF), LV_PART_KNOB | LV_STATE_CHECKED );
-lv_obj_set_style_bg_opa(ui_SortToggle, 255, LV_PART_KNOB| LV_STATE_CHECKED);
-lv_obj_set_style_bg_img_src( ui_SortToggle, &ui_img_1508908300, LV_PART_KNOB | LV_STATE_CHECKED );
-lv_obj_set_style_bg_img_recolor(ui_SortToggle, lv_color_hex(0x111111), LV_PART_KNOB| LV_STATE_CHECKED);
-lv_obj_set_style_bg_img_recolor_opa(ui_SortToggle, 255, LV_PART_KNOB| LV_STATE_CHECKED);
-
 ui_Lists_Title_Bar = lv_obj_create(ui_Lists_Bar);
 lv_obj_set_width( ui_Lists_Title_Bar, 250);
 lv_obj_set_height( ui_Lists_Title_Bar, 40);
@@ -279,6 +226,27 @@ lv_obj_set_style_text_opa(ui_List_Title, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
 lv_obj_set_style_text_align(ui_List_Title, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN| LV_STATE_DEFAULT);
 lv_obj_set_style_text_decor(ui_List_Title, LV_TEXT_DECOR_NONE, LV_PART_MAIN| LV_STATE_DEFAULT);
 lv_obj_set_style_text_font(ui_List_Title, &lv_font_montserrat_24, LV_PART_MAIN| LV_STATE_DEFAULT);
+
+ui_Sort_Lists = lv_dropdown_create(ui_Lists_Bar);
+lv_dropdown_set_options( ui_Sort_Lists, "A-Z\nZ-A\nFavorites\nLists" );
+lv_obj_set_width( ui_Sort_Lists, 130);
+lv_obj_set_height( ui_Sort_Lists, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_Sort_Lists, 1 );
+lv_obj_set_y( ui_Sort_Lists, 55 );
+lv_obj_set_align( ui_Sort_Lists, LV_ALIGN_TOP_MID );
+lv_obj_add_flag( ui_Sort_Lists, LV_OBJ_FLAG_SCROLL_ON_FOCUS );   /// Flags
+lv_obj_set_style_text_color(ui_Sort_Lists, lv_color_hex(0xCCCCCC), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_text_opa(ui_Sort_Lists, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_Sort_Lists, &lv_font_montserrat_18, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_radius(ui_Sort_Lists, 0, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_bg_color(ui_Sort_Lists, lv_color_hex(0x00A8B5), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_bg_opa(ui_Sort_Lists, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_border_color(ui_Sort_Lists, lv_color_hex(0x00A8B5), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_border_opa(ui_Sort_Lists, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+
+lv_obj_set_style_radius(lv_dropdown_get_list(ui_Sort_Lists), 0,  LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_bg_color(lv_dropdown_get_list(ui_Sort_Lists), lv_color_hex(0x4B4B4B),  LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_bg_opa(lv_dropdown_get_list(ui_Sort_Lists), 255,  LV_PART_MAIN| LV_STATE_DEFAULT);
 
 ui_PageOasisLogo = lv_img_create(ui_Main_Screen);
 lv_img_set_src(ui_PageOasisLogo, &ui_img_pageoasislogo_png);
