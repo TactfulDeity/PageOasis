@@ -3,88 +3,110 @@
 #include "lv_examples/lv_apps/demo/demo.h"
 #include <iostream>
 #include <string>
-#include <filesystem> // Include for std::filesystem
+#include <filesystem>
+#include "RenderWell/Types.hpp"
+#include "RenderWell/BackendManager.hpp"
 
-// Simulated RenderWell class
-namespace RenderWell {
-    template<bool UseAtoZ, bool UseZtoA, bool UseRecent, bool UseFavorites>
-    struct Sort {
-        static inline constexpr bool UsingAtoZ = UseAtoZ;
-        static inline constexpr bool UsingZtoA = UseZtoA;
-        static inline constexpr bool UsingRecent = UseRecent;
-        static inline constexpr bool UsingFavorites = UseFavorites;
-    };
-
-    using SortAtoZ = Sort<true, false, false, false>;
-    using SortZtoA = Sort<false, true, false, false>;
-    using SortRecent = Sort<false, false, true, false>;
-    using SortFavorites = Sort<false, false, false, true>;
-}
-
-class RenderWell {
+class GUI {
 public:
-    static std::string processRequest(const std::string& commandString) {
-        // Simulate backend processing
-        if (commandString == "SortType: A-Z") {
-            // Replace with your backend logic
-            return "/path/to/sorted/files.txt";
-        } else {
-            return "";
-        }
+    GUI()
+        : m_Controller(RenderWell::BackendManager())
+    {
+    }
+
+    void sortLibraryAtoZ() {
+        // Use the SortAtoZ type from Types.hpp for sorting
+        std::vector<unsigned long> uuidList = m_Controller.sort(RenderWell::k_AtoZ);
+
+        // Update GUI to show the new UUID list ordering
+        updateGUI(uuidList);
+    }
+
+    void sortLibraryZtoA() {
+        // Use the SortZtoA type from Types.hpp for sorting
+        std::vector<unsigned long> uuidList = m_Controller.sort(RenderWell::k_ZtoA);
+
+        // Update GUI to show the new UUID list ordering
+        updateGUI(uuidList);
+    }
+
+    void sortLibraryRecents() {
+        // Use the SortRecents type from Types.hpp for sorting
+        std::vector<unsigned long> uuidList = m_Controller.sort(RenderWell::k_Recents);
+
+        // Update GUI to show the new UUID list ordering
+        updateGUI(uuidList);
+    }
+
+    void sortLibraryFavorites() {
+        // Use the SortFavorites type from Types.hpp for sorting
+        std::vector<unsigned long> uuidList = m_Controller.sort(RenderWell::k_Favorites);
+
+        // Update GUI to show the new UUID list ordering
+        updateGUI(uuidList);
+    }
+
+private:
+    BackendManager m_Controller;
+
+    void updateGUI(const std::vector<unsigned long>& uuidList) {
+        // Implement LVGL code to update your eBook icons based on the UUID list
+        // You should iterate through uuidList and update your GUI accordingly
     }
 };
 
-void sortLibrary(RenderWell::Sort<true, false, false, false>) {
-    std::string commandString = "SortType: A-Z";
-    std::string backendResult = RenderWell::processRequest(commandString);
-
-    // Convert the backend result to a filesystem path
-    std::filesystem::path path(backendResult);
-
-    if (!path.empty()) {
-        // Open the sorted file
-        std::ifstream file(path);
-        if (file.is_open()) {
-            // Read and process the lines here to create the new ordering
-
-            // Example: Print the lines
-            std::string line;
-            while (std::getline(file, line)) {
-                std::cout << line << std::endl;
-                // Implement your processing logic here
-            }
-
-            file.close();
-
-            // Processed the lines, now update the GUI accordingly.
-            // Implement LVGL code to shuffle eBook icons based on the new ordering.
-        } else {
-            // Handle file open error
-        }
-    } else {
-        // Handle backend result error
-    }
-}
-
 int main(int argc, char* argv[]) {
-    // Initialize LVGL and set up your display driver
+    // Initialize LVGL and set up display driver
     lv_init();
 
     // Set up the display driver (replace with your driver configuration)
     fbdev_init();
 
-    // Create a simple LVGL button for sorting
-    lv_obj_t* button = lv_btn_create(lv_scr_act());
-    lv_btn_set_fit(button, LV_FIT_TIGHT);
+    // Create LVGL buttons for sorting
+    lv_obj_t* buttonAtoZ = lv_btn_create(lv_scr_act());
+    lv_btn_set_fit(buttonAtoZ, LV_FIT_TIGHT);
+    lv_obj_t* labelAtoZ = lv_label_create(buttonAtoZ);
+    lv_label_set_text(labelAtoZ, "Sort A-Z");
 
-    lv_obj_t* label = lv_label_create(button);
-    lv_label_set_text(label, "Sort A-Z");
+    lv_obj_t* buttonZtoA = lv_btn_create(lv_scr_act());
+    lv_btn_set_fit(buttonZtoA, LV_FIT_TIGHT);
+    lv_obj_t* labelZtoA = lv_label_create(buttonZtoA);
+    lv_label_set_text(labelZtoA, "Sort Z-A");
 
-    // Assign an event handler for the button
-    lv_obj_set_event_cb(button, [](lv_obj_t*, lv_event_t event) {
+    lv_obj_t* buttonRecents = lv_btn_create(lv_scr_act());
+    lv_btn_set_fit(buttonRecents, LV_FIT_TIGHT);
+    lv_obj_t* labelRecents = lv_label_create(buttonRecents);
+    lv_label_set_text(labelRecents, "Sort Recents");
+
+    lv_obj_t* buttonFavorites = lv_btn_create(lv_scr_act());
+    lv_btn_set_fit(buttonFavorites, LV_FIT_TIGHT);
+    lv_obj_t* labelFavorites = lv_label_create(buttonFavorites);
+    lv_label_set_text(labelFavorites, "Sort Favorites");
+
+    GUI gui = GUI();
+
+    // Assign event handlers for the buttons
+    lv_obj_set_event_cb(buttonAtoZ, [](lv_obj_t*, lv_event_t event) {
         if (event == LV_EVENT_CLICKED) {
-            // Use the SortAtoZ type for sorting
-            sortLibrary(RenderWell::SortAtoZ{});
+            gui.sortLibraryAtoZ();
+        }
+    });
+
+    lv_obj_set_event_cb(buttonZtoA, [](lv_obj_t*, lv_event_t event) {
+        if (event == LV_EVENT_CLICKED) {
+            gui.sortLibraryZtoA();
+        }
+    });
+
+    lv_obj_set_event_cb(buttonRecents, [](lv_obj_t*, lv_event_t event) {
+        if (event == LV_EVENT_CLICKED) {
+            gui.sortLibraryRecents();
+        }
+    });
+
+    lv_obj_set_event_cb(buttonFavorites, [](lv_obj_t*, lv_event_t event) {
+        if (event == LV_EVENT_CLICKED) {
+            gui.sortLibraryFavorites();
         }
     });
 
