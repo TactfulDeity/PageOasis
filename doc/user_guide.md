@@ -114,7 +114,13 @@ Before installing the Offline eBook Application, ensure that your device meets t
     - The next toggle button will change how the eBooks are displayed. From grid view to list view and back again.
 
 4. Sort A-Z or Z-A
-- The last toggle button will change the default sort from Alphabetically A-Z to reverse alpabetically Z-A
+    - In the List part of the side bar there will be a drop down listing the current sort order
+        - A-Z
+        - Z-A
+        - Favorites
+        - Selected list
+            - this is for what ever custom lists you have created.
+    - Selecting one of the options will organize and change the display accordingly
 
 ## Trouble Shooting
 
