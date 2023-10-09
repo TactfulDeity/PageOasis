@@ -6,6 +6,9 @@ Table of Contents
 
 1. Installation  
    - System Requirements
+   - Runtime Dependencies
+   - Testing Dependencies
+   - Third Party Libraries
    - Installation Steps
    
    
@@ -13,39 +16,41 @@ Table of Contents
 2. Getting Started   
    - Opening the Application
    - Navigating the Library
-   -
-   -
+   
+   
 
 3. Reading eBooks
    - Opening an eBook
    - Page Navigation
-   -
-   -
+   
+   
    
 4. Managing Your Library
    - Organizing eBooks
    - Deleting eBooks
-   -
-   -
+   
+   
 
 5. Advanced Features
    - Searching for eBooks
    - Theme change
    - Grid view change
    - Sort A-Z or Z-A
-   -
+   
 
 6. Troubleshooting
    - Common Issues
    - Contact Support
-   -
-   -
+   
+   
 
 7. Updates and Maintenance
    - Keeping the Application Up to Date
    - Regular Backups
-   -
-   -
+
+8. 
+   
+   
 
 
 
@@ -67,6 +72,14 @@ Before installing the Offline eBook Application, ensure that your device meets t
 - Processor: 1 GHz or faster
 - RAM: 2 GB or more
 - Storage: 100 MB of available disk space
+
+### Runtime Dependencies
+- [Poppler Library](https://poppler.freedesktop.org/)
+  - A PDF Rendering Library based on xpdf-3.0 code base.
+
+### Testing Dependencies
+- 
+
 
 ### Installation Steps
 - 
